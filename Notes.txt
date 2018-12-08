@@ -1,0 +1,269 @@
+
+https://github.com/Kaleakash/beljavadesignpattern.git
+
+
+
+
+		void main() {
+			abc();
+		}
+
+		void abc() {
+			xyz();
+		}
+
+		void xyz() {
+			mno();
+		}
+
+		void mno() {
+
+		}
+
+		OOPs :	
+
+	object : 
+		properties (state)----> have 	---> fields/ variables 
+	Person 
+		behaviour ------>do/does ---->functions/methods 
+
+	Place
+	
+	Bank
+
+	Animal 
+
+
+	Car : 
+
+	class Car {
+		int wheel;
+		float amout;
+		String color;
+
+		void start() {
+
+		}
+		void appliedGear() {
+
+		}
+
+		void moving() {
+
+		}
+		void stop() {
+
+		}
+	}
+
+	Car santro = new Car();
+
+Encapsulation : Bindig or wrapping data(variables/fields) and code(functions/methods)
+in single unit. 
+
+	class Employee {
+		private int id;
+		private String name;
+		private float salary;
+		void setValue(int id, String name, float salary) {
+			this.id = id;
+			this.name=name;
+			//this.salary = salary;
+			if(salary<0) {
+			this.salary = 8000;
+			}else {
+			this.salary = salary;
+			}
+		}
+		void display() {
+
+		}
+	}
+
+public class EmployeeTest {
+	public static void main(String args[]) {
+		Employe emp = new Employee();
+		emp.setValue(100,"Raj",-12000);
+		//emp.id=100;
+		//emp.name="Raj";
+		//emp.salary = -12000;
+		emp.display();
+	}
+}
+
+	Normal class Vs JavaBean 
+
+	class Employee {
+		int id;
+		String name;
+		float salary;
+	}
+
+	public class Employee {
+		private int id;
+		private String name;
+		private float salary;
+		public void setId(final int id) {
+			this.id = id;
+		}
+		public int getId() {
+			return id;
+		}
+	}
+	
+	Inheritance : 
+
+	OOPs 
+		: is a relationship 
+		: has a relationship 
+
+	class Employee {
+
+	}
+	class Manager extends Employee {
+
+	}
+	class Programmer extends Employee{
+
+	}	
+
+	has as 
+
+	: Association 
+
+	: Aggregation 
+	
+	: Composition 
+
+	class A {
+		B obj1;
+	}
+	
+	class B {
+		A obj2;
+	}
+
+	class Employee {
+		Address add;
+	}
+	class Address {
+		Employee emp;
+	}
+
+
+	class Student {
+		StudentHistory sh;
+	}
+
+	class StudentHistory {
+
+	}
+
+
+	Polymorphism : one name many forms 
+
+	
+	Compile time 			Run time
+
+
+	Method Overloading 			Method Overriding 
+
+
+	Abstraction : Hinding the internal imlementation without knowing 
+	background details is known as Abstraction. 
+
+	class Employee {
+		private int id;
+		private String name;
+		private Address add;
+		void setAddress(Address add) {
+			this.add = add;
+		}
+	}	
+
+
+
+	interface Shape 
+
+		draw();
+
+	Circle implements Shape 
+		draw() {}
+	Triangle implements Shape 
+		draw() {}
+
+	class ShapeFactory {
+		
+		public Shape getInstance(String shapeType) {
+			if(shapeType.equals("Circle"){
+			return new Cirlce()
+			}else if(shapeType.equals("Triangle"){
+			return new Triangle();
+			}else {
+			return null;
+			}
+		}
+	}
+
+
+
+
+	class Employee {
+		id,name	
+		age, city, phnumber 
+		Employee() {
+			
+		}
+		Employee(int id, String name) {}
+		Emloyee(int id, String name, int age){}
+		Employee(int id, String name, String city){}
+		Employee(int id, String name, long phnumber){}
+			
+	}
+
+	Employee emp1 = new Employee();
+
+
+
+	RMI
+
+Client 						Server 
+
+interface Abc {					interface Abc {
+
+	add(int x, int y);				add(int x, int y)
+
+					class AbcImp implements Abc{
+					add(int x, int y){
+						return x+y;
+					}
+					}
+
+Client					Server 
+
+Abc obj1 = (Abc)Naming.lookup("obj")		Abc obj = new AbcImp();
+obj1.add(10,20)				Naming.rebind("obj");
+	
+	EJB 
+
+	Web Service 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
