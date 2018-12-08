@@ -4,8 +4,10 @@ abstract class Sandwich {
 	public abstract double price();
 }
 class WhiteBreadSandwich extends Sandwich {
+
 	public WhiteBreadSandwich(String desc) {
-	description = desc;
+		// TODO Auto-generated constructor stub
+		description = desc;
 	}
 	@Override
 	public double price() {
@@ -16,9 +18,11 @@ class WhiteBreadSandwich extends Sandwich {
 }
 abstract class SandwichDecorator  extends Sandwich{
 	@Override
- 	 public abstract double price();
+    public abstract double price();
+
+	
 }
-class CheeseDecorator extends SandwichDecorator{
+CheeseDecorator extends SandwichDecorator{
 	Sandwich currentSandwich; 
 	public CheeseDecorator(Sandwich sw){ 
 		currentSandwich = sw; 
@@ -36,10 +40,11 @@ class CheeseDecorator extends SandwichDecorator{
 }
 class DecoratorDesignTest {
 	public static void main(String args[]) {
-Sandwich mySandwich = new WhiteBreadSandwich("White bread Sandwich");
-System.out.println("Price "+mySandwich.price()+", "+mySandwich.getDescription());
-Sandwich mySandwichCheese = new CheeseDecorator(mySandwich);
-System.out.println("Price "+mySandwichCheese.price()+","+mySandwichCheese.getDescription());
+	Sandwich mySandwich = new WhiteBreadSandwich("White bread Sandwich");
+	System.out.println("Price "+mySandwich.price()+", "+mySandwich.getDescription());
+		
+	Sandwich mySandwichCheese = new CheeseDecorator(mySandwich);
+	System.out.println("Price "+mySandwichCheese.price()+", "+mySandwichCheese.getDescription());
 
 	}
 }
